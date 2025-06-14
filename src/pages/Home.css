@@ -1,0 +1,60 @@
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* 기본 카드 크기 */
+.movie-card {
+  flex: 1 1 200px; /* 기본 너비 200px, 늘어나거나 줄어들 수 있음 */
+  max-width: 200px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 16px;
+  margin: 20px auto;
+  display: block;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 8px rgba(229, 9, 20, 0.5);
+  background-color: #222;
+  color: white;
+}
+
+.search-input::placeholder {
+  color: #bbb;
+}
+
+.genre-filter {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.genre-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.genre-btn:hover {
+  background-color: #e50914;
+}
+
+.genre-btn.active {
+  background-color: #e50914;
+  font-weight: bold;
+  box-shadow: 0 0 8px #e50914;
+}

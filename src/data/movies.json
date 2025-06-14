@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "title": "범죄도시 4",
+    "poster": "범죄도시4.webp",
+    "rating": "8.7",
+    "genre": ["액션", "범죄"],
+    "releaseDate": "2025-05-15",
+    "runningTime": 109,
+    "description": "마석도 형사의 범죄 소탕 작전이 다시 시작된다!",
+    "trailer": "https://www.youtube.com/embed/XXXXX"
+  },
+  {
+    "id": 2,
+    "title": "쿵푸팬더 4",
+    "poster": "쿵푸팬더4.webp",
+    "rating": "7.5",
+    "genre": ["애니메이션", "액션", "코미디"],
+    "releaseDate": "2025-04-10",
+    "runningTime": 94,
+    "description": "전설의 용의 전사 포의 새로운 모험이 시작된다.",
+    "trailer": "https://www.youtube.com/embed/YYYYY"
+  }
+]
