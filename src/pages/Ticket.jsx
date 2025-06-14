@@ -1,29 +1,33 @@
 import React from "react";
-import movies from "../data/movies.json";
-import MovieCard from "../components/MovieCard";
+import "./Ticket.css";
 import { useNavigate } from "react-router-dom";
-import "./Home.css";
 
-const Home = () => {
+const Ticket = () => {
   const navigate = useNavigate();
+  const ticketData = localStorage.getItem("ticket");
+  const ticket = ticketData ? JSON.parse(ticketData) : null;
 
-  const handleTicketView = () => {
-    navigate("/ticket");
+  const handleCancel = () => {
+    localStorage.removeItem("ticket");
+    navigate("/");
   };
 
+  if (!ticket) return <div>예매된 티켓이 없습니다.</div>;
+
   return (
-    <div className="home-container">
-      <h1>🎬 영화 목록</h1>
-      <button className="view-ticket-button" onClick={handleTicketView}>
-        예매 티켓 보기
-      </button>
-      <div className="movie-list">
-        {movies.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} />
-        ))}
+    <div className="ticket-container">
+      <h2>🎫 예매 티켓</h2>
+      <div className="ticket">
+        <h3>{ticket.movieTitle}</h3>
+        <p>📅 날짜: {ticket.date || "선택되지 않음"}</p>
+        <p>⏰ 시간: {ticket.time || "선택되지 않음"}</p>
+        <p>🪑 좌석: {ticket.seats.join(", ")}</p>
+        <button className="cancel-button" onClick={handleCancel}>
+          예매 취소
+        </button>
       </div>
     </div>
   );
 };
 
-export default Home;
+export default Ticket;
