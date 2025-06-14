@@ -12,6 +12,10 @@ export default function MovieDetail() {
     return <h2>해당 영화를 찾을 수 없습니다.</h2>;
   }
 
+  const handleBooking = () => {
+    navigate('/booking', { state: { movie } });
+  };
+
   return (
     <div className="movie-detail">
       <button onClick={() => navigate(-1)} className="back-button">← 뒤로가기</button>
@@ -32,6 +36,9 @@ export default function MovieDetail() {
             frameBorder="0"
             allowFullScreen
           ></iframe>
+          <button className="booking-button" onClick={handleBooking}>
+            🎟️ 예매하기
+          </button>
         </div>
       </div>
     </div>

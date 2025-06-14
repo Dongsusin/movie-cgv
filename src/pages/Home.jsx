@@ -1,15 +1,24 @@
 import { useState } from 'react';
 import movies from '../data/movies.json';
 import MovieCard from '../components/MovieCard';
+import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
-const allGenres = ['전체', '액션', '코미디', '드라마', '로맨스', 'SF', '스릴러']; // 실제 데이터 장르 맞게 변경
+const allGenres = ['전체', '액션', '코미디', '드라마', '로맨스', 'SF', '스릴러'];
 
-export default function Home() {
+const Home = () => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('전체');
 
-  // 장르 필터링 + 검색어 필터링 적용
+  const handleTicketView = () => {
+    navigate("/ticket");
+  };
+
+  const handleBookNow = (movie) => {
+    navigate("/booking", { state: { movie } });
+  };
+
   const filteredMovies = movies.filter(movie => {
     const matchesGenre = selectedGenre === '전체' || movie.genre.includes(selectedGenre);
     const matchesSearch = movie.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -19,6 +28,11 @@ export default function Home() {
 
   return (
     <div className="home">
+      <h1>🎬 영화 목록</h1>
+      <button className="view-ticket-button" onClick={handleTicketView}>
+        예매 티켓 보기
+      </button>
+
       <input
         type="search"
         placeholder="영화 제목 또는 장르로 검색"
@@ -41,9 +55,16 @@ export default function Home() {
 
       <div className="movie-list">
         {filteredMovies.map(movie => (
-          <MovieCard key={movie.id} movie={movie} />
+          <div key={movie.id} className="movie-card-with-button">
+            <MovieCard movie={movie} />
+            <button className="book-now-btn" onClick={() => handleBookNow(movie)}>
+              예매하기
+            </button>
+          </div>
         ))}
       </div>
     </div>
   );
-}
+};
+
+export default Home;
