@@ -165,20 +165,8 @@
   
 .slick-prev,
 .slick-next {
-  z-index: 10000;
-  width: 62px;
-  height: 60px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  font-size: 0;
-  border-radius: 50%;
-  border: 2px solid white;
-  background-color: rgb(0, 0, 0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  width: 45px;
+  height: 45px;
 }
 
 .slick-prev {
