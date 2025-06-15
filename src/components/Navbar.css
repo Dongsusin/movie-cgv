@@ -19,6 +19,7 @@
   font-weight: bold;
   text-decoration: none;
   color: #e50914;
+  text-wrap: nowrap;
 }
 
 .navbar nav {
@@ -32,12 +33,29 @@
   text-decoration: none;
   color: white;
   font-size: 16px;
+  text-wrap: nowrap;
 }
 
 .navbar nav a:hover {
   color: #e50914;
 }
 
-.navbar nav button {
-  margin-bottom: 0;
+.cart-button{
+  width: 100px;
+  font-size: 12px;
+  text-wrap: nowrap;
+  padding: 6px;
+  margin: 0;
+}
+
+@media screen and (max-width: 426px) {
+  .navbar {
+  padding: 5px;
+}
+  .navbar-logo {
+  font-size: 16px;
+  }
+  .navbar nav a {
+  font-size: 12px;
+  }
 }
