@@ -98,5 +98,105 @@
     "releaseDate": "2023-11-22",
     "runningTime": 141,
     "trailer": "https://www.youtube.com/embed/-AZ7cnwn2YI?si=zrA7YXZLgq77XUko"
+  },
+  {
+    "id": 11,
+    "title": "토이 스토리 5",
+    "poster": "posters/토이스토리5.webp",
+    "rating": "8.3",
+    "genre": ["애니메이션", "가족", "모험"],
+    "releaseDate": "2026-06-20",
+    "runningTime": 102,
+    "trailer": "https://www.youtube.com/embed/TvUaMbt85ag?si=QyCcQhhdQvAOmBUo"
+  },
+  {
+    "id": 12,
+    "title": "아바타: 물의 길",
+    "poster": "posters/아바타2.webp",
+    "rating": "8.2",
+    "genre": ["SF", "판타지", "모험"],
+    "releaseDate": "2022-12-14",
+    "runningTime": 192,
+    "trailer": "https://www.youtube.com/embed/kihrFxwdMb4?si=gCXbFOUDu_3o-5Ot"
+  },
+  {
+    "id": 13,
+    "title": "탑건: 매버릭",
+    "poster": "posters/탑건.jfif",
+    "rating": "8.6",
+    "genre": ["액션", "드라마"],
+    "releaseDate": "2022-06-22",
+    "runningTime": 131,
+    "trailer": "https://www.youtube.com/embed/Mrj9XACVJ8U?si=WMABS8FDOI0UrnPc"
+  },
+  {
+    "id": 14,
+    "title": "소울",
+    "poster": "posters/소울.webp",
+    "rating": "8.1",
+    "genre": ["애니메이션", "드라마", "판타지"],
+    "releaseDate": "2020-12-25",
+    "runningTime": 100,
+    "trailer": "https://www.youtube.com/embed/Q0zFPlArth0?si=MYKh5zyBBqX05HRu"
+  },
+  {
+    "id": 15,
+    "title": "이터널스",
+    "poster": "posters/이터널스.webp",
+    "rating": "6.8",
+    "genre": ["액션", "모험", "판타지"],
+    "releaseDate": "2021-11-03",
+    "runningTime": 157,
+    "trailer": "https://www.youtube.com/embed/BdkSkI61aGo?si=lwOGR-a0tNg7wB9V"
+  },
+  {
+    "id": 16,
+    "title": "라라랜드",
+    "poster": "posters/라라랜드.webp",
+    "rating": "8.0",
+    "genre": ["드라마", "로맨스", "뮤지컬"],
+    "releaseDate": "2016-12-07",
+    "runningTime": 128,
+    "trailer": "https://www.youtube.com/embed/Dt5hFexM5BI?si=oETvQBLg-BI9CoNO"
+  },
+  {
+    "id": 17,
+    "title": "기생충",
+    "poster": "posters/기생충.jpg",
+    "rating": "8.6",
+    "genre": ["드라마", "스릴러"],
+    "releaseDate": "2019-05-30",
+    "runningTime": 132,
+    "trailer": "https://www.youtube.com/embed/jBdRhhSt3Bc?si=-IdxXklt2TQHjk3x"
+  },
+  {
+    "id": 18,
+    "title": "인터스텔라",
+    "poster": "posters/인터스텔라.jpg",
+    "rating": "8.9",
+    "genre": ["SF", "드라마", "모험"],
+    "releaseDate": "2014-11-06",
+    "runningTime": 169,
+    "trailer": "https://www.youtube.com/embed/d2VN6NNa9BE?si=cfJVo4XHVmMrAVT6"
+  },
+  {
+    "id": 19,
+    "title": "엔칸토: 마법의 세계",
+    "poster": "posters/엔칸토.jpg",
+    "rating": "7.3",
+    "genre": ["애니메이션", "가족", "뮤지컬"],
+    "releaseDate": "2021-11-24",
+    "runningTime": 102,
+    "trailer": "https://www.youtube.com/embed/DJs_ihmMZfg?si=LVFdubnDjxQcxRWa"
+  },
+  {
+    "id": 20,
+    "title": "인디아나 존스: 운명의 다이얼",
+    "poster": "posters/인디아나존스.webp",
+    "rating": "6.9",
+    "genre": ["액션", "모험"],
+    "releaseDate": "2023-06-28",
+    "runningTime": 154,
+    "trailer": "https://www.youtube.com/embed/kiopmqUavPA?si=PWXDeT-fsXmTbsAX"
   }
 ]

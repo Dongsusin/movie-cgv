@@ -8,7 +8,7 @@ export default function Navbar() {
         <Link to="/" className="navbar-logo">영화 웹</Link>
         <nav>
           <Link to="/">홈</Link>
-          {/* 추후 다른 메뉴 추가 가능 */}
+          <Link to="/ticket">예매티켓</Link>
         </nav>
       </div>
     </header>

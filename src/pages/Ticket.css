@@ -6,10 +6,11 @@
 .ticket {
   margin: 0 auto;
   padding: 20px;
-  width: 300px;
+  width: auto;
   border: 2px dashed #333;
   border-radius: 12px;
   background-color: #fefefe;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   color: #000;
+  max-width: 300px;
 }

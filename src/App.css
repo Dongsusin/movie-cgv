@@ -17,14 +17,12 @@ button {
   cursor: pointer;
 }
 
-/* 전체 앱 컨테이너 */
 .app {
   min-height: 100vh;
   background-color: #141414;
   color: white;
 }
 
-/* 공통 버튼 스타일 */
 button {
   background-color: #e50914;
   color: white;

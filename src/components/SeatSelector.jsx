@@ -26,7 +26,7 @@ const SeatSelector = ({ onSelect }) => {
           <div key={row} className="seat-row">
             <div className="row-label">{row}</div>
             {cols.map((col) => {
-              const isGap = col === 7 || col === 12; // 통로
+              const isGap = col === 7 || col === 12;
               if (isGap) return <div key={col} className="seat-gap"></div>;
 
               const seatId = `${row}-${col}`;
