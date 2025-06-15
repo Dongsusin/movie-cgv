@@ -96,7 +96,7 @@ const randomMovies = getRandomSamples(filteredMovies, 5);
       <div className="trailers">
       <Slider
         ref={sliderRef}
-        dots={true}
+        dots={false}
         infinite={true}
         speed={500}
         slidesToShow={1}
