@@ -20,15 +20,22 @@ export default function MovieDetail() {
     <div className="movie-detail">
       <button onClick={() => navigate(-1)} className="back-button">← 뒤로가기</button>
       <div className="movie-content">
-        <img src={movie.poster} alt={movie.title} className="detail-poster" />
         <div className="detail-info">
-          <h1>{movie.title}</h1>
-          <p><strong>⭐ 평점:</strong> {movie.rating}</p>
-          <p><strong>🎬 장르:</strong> {movie.genre.join(', ')}</p>
-          <p><strong>📅 개봉일:</strong> {movie.releaseDate}</p>
-          <p><strong>⏱️ 러닝타임:</strong> {movie.runningTime}분</p>
-          <p><strong>📖 줄거리:</strong> {movie.description}</p>
-          <iframe
+          <div className='detail left'>
+            <h1>{movie.title}</h1>
+          <p><strong>평점:</strong> {movie.rating}</p>
+          <p><strong>장르:</strong> {movie.genre.join(', ')}</p>
+          <p><strong>개봉일:</strong> {movie.releaseDate}</p>
+          <p><strong>러닝타임:</strong> {movie.runningTime}분</p>
+          </div>
+          <div className='detail-right'>
+            <img src={`/${movie.poster}`} alt={movie.title} />
+            <button className="booking-button" onClick={handleBooking}>
+            예매하기
+          </button>
+          </div>
+        </div>
+        <iframe
             width="560"
             height="315"
             src={movie.trailer}
@@ -36,10 +43,6 @@ export default function MovieDetail() {
             frameBorder="0"
             allowFullScreen
           ></iframe>
-          <button className="booking-button" onClick={handleBooking}>
-            🎟️ 예매하기
-          </button>
-        </div>
       </div>
     </div>
   );

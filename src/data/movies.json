@@ -2,23 +2,101 @@
   {
     "id": 1,
     "title": "범죄도시 4",
-    "poster": "범죄도시4.webp",
+    "poster": "posters/범죄도시4.webp",
     "rating": "8.7",
     "genre": ["액션", "범죄"],
     "releaseDate": "2025-05-15",
     "runningTime": 109,
-    "description": "마석도 형사의 범죄 소탕 작전이 다시 시작된다!",
-    "trailer": "https://www.youtube.com/embed/XXXXX"
+    "trailer": "https://www.youtube.com/embed/pMAPj6WVsT4?si=e_rppdkGQvNcw3oI"
   },
   {
     "id": 2,
     "title": "쿵푸팬더 4",
-    "poster": "쿵푸팬더4.webp",
+    "poster": "posters/쿵푸팬더4.webp",
     "rating": "7.5",
     "genre": ["애니메이션", "액션", "코미디"],
     "releaseDate": "2025-04-10",
     "runningTime": 94,
-    "description": "전설의 용의 전사 포의 새로운 모험이 시작된다.",
-    "trailer": "https://www.youtube.com/embed/YYYYY"
+    "trailer": "https://www.youtube.com/embed/b0yAOYIvP1Y?si=8YjeV9QC9s-lSDmQ"
+  },
+  {
+    "id": 3,
+    "title": "듄: 파트 2",
+    "poster": "posters/듄2.jpg",
+    "rating": "8.8",
+    "genre": ["SF", "액션", "드라마"],
+    "releaseDate": "2024-02-28",
+    "runningTime": 166,
+    "trailer": "https://www.youtube.com/embed/BR5YCAxjbwc?si=_Xhlex_TBtd9Zdke"
+  },
+  {
+    "id": 4,
+    "title": "가디언즈 오브 갤럭시 Vol.3",
+    "poster": "posters/가오갤3.webp",
+    "rating": "8.0",
+    "genre": ["SF", "액션", "모험"],
+    "releaseDate": "2023-05-03",
+    "runningTime": 150,
+    "trailer": "https://www.youtube.com/embed/XyHr-s3MfCQ?si=kI-v7TM204cmX4Iy"
+  },
+  {
+    "id": 5,
+    "title": "스파이더맨: 노 웨이 홈",
+    "poster": "posters/스파이더맨.webp",
+    "rating": "8.9",
+    "genre": ["액션", "SF", "모험"],
+    "releaseDate": "2021-12-15",
+    "runningTime": 148,
+    "trailer": "https://www.youtube.com/embed/yFZh-Wqi7RI?si=zCUTC9iv8feVJLJB"
+  },
+  {
+    "id": 6,
+    "title": "엘리멘탈",
+    "poster": "posters/엘리멘탈.webp",
+    "rating": "7.2",
+    "genre": ["애니메이션", "판타지", "로맨스"],
+    "releaseDate": "2023-06-14",
+    "runningTime": 101,
+    "trailer": "https://www.youtube.com/embed/BOqFRHCrN-k?si=dtumHlcHpyLmwsCn"
+  },
+  {
+    "id": 7,
+    "title": "더 배트맨",
+    "poster": "posters/배트맨.jfif",
+    "rating": "8.4",
+    "genre": ["범죄", "스릴러", "액션"],
+    "releaseDate": "2022-03-01",
+    "runningTime": 176,
+    "trailer": "https://www.youtube.com/embed/qhKCYXSHpWY?si=NzmkIXUWNuhsfFoI"
+  },
+  {
+    "id": 8,
+    "title": "오펜하이머",
+    "poster": "posters/오펜하이머.webp",
+    "rating": "8.6",
+    "genre": ["전기", "드라마", "역사"],
+    "releaseDate": "2023-07-21",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/oSqK_v6zPoM?si=QT1Yreke7MFmRH27"
+  },
+  {
+    "id": 9,
+    "title": "인사이드 아웃 2",
+    "poster": "posters/인사이드 아웃2.webp",
+    "rating": "8.1",
+    "genre": ["애니메이션", "가족", "코미디"],
+    "releaseDate": "2025-06-12",
+    "runningTime": 96,
+    "trailer": "https://www.youtube.com/embed/EiCmnIaj4u8?si=PyZvBlCjz58M0YWS"
+  },
+  {
+    "id": 10,
+    "title": "서울의 봄",
+    "poster": "posters/서울의봄.webp",
+    "rating": "9.0",
+    "genre": ["드라마", "역사", "스릴러"],
+    "releaseDate": "2023-11-22",
+    "runningTime": 141,
+    "trailer": "https://www.youtube.com/embed/-AZ7cnwn2YI?si=zrA7YXZLgq77XUko"
   }
 ]

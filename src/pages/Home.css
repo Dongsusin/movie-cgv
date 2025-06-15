@@ -1,3 +1,8 @@
+.home{
+  padding: 50px;
+  text-align: center;
+}
+
 .movie-list {
   display: flex;
   flex-wrap: wrap;
@@ -5,9 +10,8 @@
   gap: 20px;
 }
 
-/* 기본 카드 크기 */
 .movie-card {
-  flex: 1 1 200px; /* 기본 너비 200px, 늘어나거나 줄어들 수 있음 */
+  flex: 1 1 200px;
   max-width: 200px;
 }
 
@@ -24,6 +28,8 @@
   box-shadow: 0 0 8px rgba(229, 9, 20, 0.5);
   background-color: #222;
   color: white;
+  display: grid;
+  grid-template-columns: repeat(15,1fr);
 }
 
 .search-input::placeholder {

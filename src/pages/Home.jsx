@@ -4,7 +4,7 @@ import MovieCard from '../components/MovieCard';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
-const allGenres = ['전체', '액션', '코미디', '드라마', '로맨스', 'SF', '스릴러'];
+const allGenres = ['전체', '액션', '코미디', '드라마', '로맨스', 'SF', '스릴러','범죄','애니메이션','드라마','모험','판타지','전기','역사','가족'];
 
 const Home = () => {
   const navigate = useNavigate();
@@ -28,7 +28,8 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h1>🎬 영화 목록</h1>
+      <h1>영화 목록</h1>
+
       <button className="view-ticket-button" onClick={handleTicketView}>
         예매 티켓 보기
       </button>
