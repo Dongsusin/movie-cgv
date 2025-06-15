@@ -1,0 +1,41 @@
+.shop-container {
+  padding: 40px;
+  color: white;
+  text-align: center;
+}
+
+.shop-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.shop-item {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.shop-item:hover {
+  transform: scale(1.03);
+}
+
+.item-info {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  padding: 16px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}

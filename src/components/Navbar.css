@@ -1,7 +1,7 @@
 .navbar {
   position: sticky;
   top: 0;
-  background-color: #141414;
+  background-color: #000000;
   padding: 15px 30px;
   color: white;
   z-index: 100;
@@ -21,6 +21,12 @@
   color: #e50914;
 }
 
+.navbar nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 .navbar nav a {
   margin-left: 20px;
   text-decoration: none;
@@ -30,4 +36,8 @@
 
 .navbar nav a:hover {
   color: #e50914;
+}
+
+.navbar nav button {
+  margin-bottom: 0;
 }

@@ -4,6 +4,8 @@
   color: white;
   transition: transform 0.3s;
   flex-grow: 1;
+  height: 100%;
+  width: 100%;
 }
 
 .movie-card:hover {
@@ -15,6 +17,10 @@
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.movie-card img:hover {
+ box-shadow: 0 0 15px 5px red; 
 }
 
 .movie-card h3 {

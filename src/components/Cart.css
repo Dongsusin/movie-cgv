@@ -1,0 +1,98 @@
+/* src/components/Cart.css */
+
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.cart {
+  position: relative;
+  background: rgba(30, 30, 40, 0.95);
+  color: #f0f0f0;
+  padding: 30px 35px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 420px;
+  max-height: 80vh;
+  overflow-y: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 2px solid red; 
+}
+
+.cart h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.cart li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 8px;
+}
+
+.cart p strong {
+  font-size: 1.2rem;
+}
+
+.cart button {
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.7);
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.cart button:hover {
+  background: #b0060f;
+  box-shadow: 0 6px 18px rgba(176, 6, 15, 0.9);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 8px;
+}
+
+.remove-btn {
+  background: #b10606;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #7a0404;
+}
