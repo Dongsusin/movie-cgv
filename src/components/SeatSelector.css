@@ -1,7 +1,14 @@
+.seat-map-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
 .seat-map {
-  text-align: center;
   margin: 20px auto;
-  max-width: 900px;
+  width: fit-content; /* 내용 크기만큼 */
+  min-width: 728px;
+  min-height: 584px;
+  text-align: center;
 }
 
 .screen {

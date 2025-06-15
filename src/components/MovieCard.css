@@ -1,12 +1,10 @@
 .movie-card {
-  /* width: 200px;  제거 또는 주석 처리 */
   margin: 10px;
   text-decoration: none;
   color: white;
   transition: transform 0.3s;
-  flex-grow: 1; /* flex 아이템으로 유연하게 크기 변함 */
+  flex-grow: 1;
 }
-
 
 .movie-card:hover {
   transform: scale(1.05);
@@ -17,4 +15,24 @@
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.movie-card h3 {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px){
+  .movie-card img {
+    width: 150px;
+    height: 200px;
+  }
+  .movie-card h3 {
+    width: 150px;
+  }
 }
