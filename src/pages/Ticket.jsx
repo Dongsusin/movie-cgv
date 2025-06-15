@@ -12,7 +12,12 @@ const Ticket = () => {
     navigate("/");
   };
 
-  if (!ticket) return <div>예매된 티켓이 없습니다.</div>;
+  if (!ticket) return (
+    <div className="ticket-container">
+      <div className="ticket">예매된 티켓이 없습니다.</div>
+    </div>
+  )
+  
 
   return (
     <div className="ticket-container">

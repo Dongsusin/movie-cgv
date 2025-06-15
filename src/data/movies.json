@@ -198,5 +198,105 @@
     "releaseDate": "2023-06-28",
     "runningTime": 154,
     "trailer": "https://www.youtube.com/embed/kiopmqUavPA?si=PWXDeT-fsXmTbsAX"
+  },
+  {
+    "id": 21,
+    "title": "블레이드 러너 2049",
+    "poster": "posters/블레이드러너2049.webp",
+    "rating": "8.3",
+    "genre": ["SF", "스릴러", "액션"],
+    "releaseDate": "2025-09-10",
+    "runningTime": 145,
+    "trailer": "https://www.youtube.com/embed/3Lgjs114tqw?si=UtnjVbkn9G98HRoc"
+  },
+  {
+    "id": 22,
+    "title": "나의 소녀시대",
+    "poster": "posters/나의소녀시대.webp",
+    "rating": "7.9",
+    "genre": ["로맨스", "드라마", "코미디"],
+    "releaseDate": "2023-08-15",
+    "runningTime": 120,
+    "trailer": "https://www.youtube.com/embed/qrGRcjVJ7AM?si=Mx4OlWdzWQtXDZDg"
+  },
+  {
+    "id": 23,
+    "title": "에베레스트",
+    "poster": "posters/에베레스트.webp",
+    "rating": "8.1",
+    "genre": ["드라마", "모험", "실화"],
+    "releaseDate": "2024-11-01",
+    "runningTime": 132,
+    "trailer": "https://www.youtube.com/embed/zQ_2eRWNJ9U?si=3ErmVFD2kcJt0a_b"
+  },
+  {
+    "id": 24,
+    "title": "아쿠아맨",
+    "poster": "posters/아쿠아맨.webp",
+    "rating": "7.7",
+    "genre": ["액션", "모험", "판타지"],
+    "releaseDate": "2026-03-20",
+    "runningTime": 140,
+    "trailer": "https://www.youtube.com/embed/N7uu8v34HU8?si=6DANDFYaMpZMFA7w"
+  },
+  {
+    "id": 25,
+    "title": "마션",
+    "poster": "posters/마션.webp",
+    "rating": "8.4",
+    "genre": ["SF", "드라마", "모험"],
+    "releaseDate": "2025-12-05",
+    "runningTime": 150,
+    "trailer": "https://www.youtube.com/embed/hAWgzLTa3gI?si=XJjXENSj8wo8aOva"
+  },
+  {
+    "id": 26,
+    "title": "레디 플레이어 원",
+    "poster": "posters/레디플레이어원.jpeg",
+    "rating": "7.8",
+    "genre": ["SF", "액션", "어드벤처"],
+    "releaseDate": "2026-07-11",
+    "runningTime": 138,
+    "trailer": "https://www.youtube.com/embed/FiCyZUt3uz0?si=_5CBvdyaHY7MVEEw"
+  },
+  {
+    "id": 27,
+    "title": "시카고 뮤지컬",
+    "poster": "posters/시카고.webp",
+    "rating": "8.0",
+    "genre": ["뮤지컬", "드라마", "범죄"],
+    "releaseDate": "2023-02-25",
+    "runningTime": 114,
+    "trailer": "https://www.youtube.com/embed/k1_7KTFYOaY?si=ucm8Jw6iuhC518RI"
+  },
+  {
+    "id": 28,
+    "title": "기묘한 이야기",
+    "poster": "posters/기묘한이야기.webp",
+    "rating": "8.5",
+    "genre": ["SF", "호러", "스릴러"],
+    "releaseDate": "2025-10-18",
+    "runningTime": 130,
+    "trailer": "https://www.youtube.com/embed/xZUttbGGZzM?si=0yuhhF7GSxi2vC1e"
+  },
+  {
+    "id": 29,
+    "title": "반지의 제왕",
+    "poster": "posters/반지의 제왕.jpg",
+    "rating": "8.9",
+    "genre": ["판타지", "모험", "액션"],
+    "releaseDate": "2026-11-05",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/iByssURPjmE?si=wfxercB_hQ9PzNxI"
+  },
+  {
+    "id": 30,
+    "title": "아바타",
+    "poster": "posters/아바타.webp",
+    "rating": "8.9",
+    "genre": ["SF", "판타지", "모험"],
+    "releaseDate": "2009-12-17",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/kdZ1KmKxTqk?si=eUVqEOxG0chTWqd8"
   }
 ]
