@@ -4,8 +4,8 @@
     "title": "범죄도시 4",
     "poster": "posters/범죄도시4.webp",
     "rating": "8.7",
-    "genre": ["액션", "범죄"],
-    "releaseDate": "2025-05-15",
+    "genre": ["액션", "범죄","스릴러","코미디"],
+    "releaseDate": "2024-04-24",
     "runningTime": 109,
     "trailer": "https://www.youtube.com/embed/pMAPj6WVsT4?si=e_rppdkGQvNcw3oI"
   },
@@ -15,7 +15,7 @@
     "poster": "posters/쿵푸팬더4.webp",
     "rating": "7.5",
     "genre": ["애니메이션", "액션", "코미디"],
-    "releaseDate": "2025-04-10",
+    "releaseDate": "2024-04-10",
     "runningTime": 94,
     "trailer": "https://www.youtube.com/embed/b0yAOYIvP1Y?si=8YjeV9QC9s-lSDmQ"
   },
@@ -24,7 +24,7 @@
     "title": "듄: 파트 2",
     "poster": "posters/듄2.jpg",
     "rating": "8.8",
-    "genre": ["SF", "액션", "드라마"],
+    "genre": ["SF", "액션", "어드벤처"],
     "releaseDate": "2024-02-28",
     "runningTime": 166,
     "trailer": "https://www.youtube.com/embed/BR5YCAxjbwc?si=_Xhlex_TBtd9Zdke"
@@ -56,7 +56,7 @@
     "rating": "7.2",
     "genre": ["애니메이션", "판타지", "로맨스"],
     "releaseDate": "2023-06-14",
-    "runningTime": 101,
+    "runningTime": 109,
     "trailer": "https://www.youtube.com/embed/BOqFRHCrN-k?si=dtumHlcHpyLmwsCn"
   },
   {
@@ -75,7 +75,7 @@
     "poster": "posters/오펜하이머.webp",
     "rating": "8.6",
     "genre": ["전기", "드라마", "역사"],
-    "releaseDate": "2023-07-21",
+    "releaseDate": "2023-08-15",
     "runningTime": 180,
     "trailer": "https://www.youtube.com/embed/oSqK_v6zPoM?si=QT1Yreke7MFmRH27"
   },
@@ -298,5 +298,205 @@
     "releaseDate": "2009-12-17",
     "runningTime": 180,
     "trailer": "https://www.youtube.com/embed/kdZ1KmKxTqk?si=eUVqEOxG0chTWqd8"
+  },
+  {
+    "id": 31,
+    "title": "아바타3",
+    "poster": "posters/아바타3.webp",
+    "rating": "9.9",
+    "genre": ["SF", "판타지", "모험"],
+    "releaseDate": "2025-12-19",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/TNeu5EyGvq8?si=wv4raj0SbJfvlyWf"
+  },
+  {
+    "id": 32,
+    "title": "드래곤 길들이기",
+    "poster": "posters/드래곤.jpg",
+    "rating": "9.2",
+    "genre": ["액션", "판타지", "모험"],
+    "releaseDate": "2025-06-06",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/eyeXAgO7rp8?si=XIMBw_5ayyukcfB1"
+  },
+  {
+    "id": 33,
+    "title": "엘리오",
+    "poster": "posters/엘리오.webp",
+    "rating": "9.5",
+    "genre": ["애니메이션", "판타지", "모험"],
+    "releaseDate": "2025-06-18",
+    "runningTime": 170,
+    "trailer": "https://www.youtube.com/embed/yIRhhHy6Jnc?si=cQR9nc_peDR_07Nb"
+  },
+  {
+    "id": 34,
+    "title": "28년후",
+    "poster": "posters/28년후.webp",
+    "rating": "9.7",
+    "genre": ["스릴러", "드라마", "호러"],
+    "releaseDate": "2009-12-17",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/oqLB35PNsig?si=xQ4H4U6BJ-PiEpoU"
+  },
+  {
+    "id": 35,
+    "title": "청설",
+    "poster": "posters/청설.webp",
+    "rating": "9.8",
+    "genre": ["드라마", "로멘스"],
+    "releaseDate": "2024-11-06",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/mGhUIExGY4Y?si=7Trj3mStSWaw_oBW"
+  },
+  {
+    "id": 36,
+    "title": "파워디지몬 더비기닝",
+    "poster": "posters/파워디지몬.jfif",
+    "rating": "8.7",
+    "genre": ["애니메이션", "액션","판타지"],
+    "releaseDate": "2023-12-25",
+    "runningTime": 80,
+    "trailer": "https://www.youtube.com/embed/LoGOSe0wz5g?si=yYmBNNUDuilq1_PW"
+  },
+  {
+    "id": 37,
+    "title": "월드워Z",
+    "poster": "posters/월드워.webp",
+    "rating": "9.8",
+    "genre": ["드라마","스릴러","SF","액션","어드벤처"],
+    "releaseDate": "2024-11-06",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/BsmDoCph6eI?si=v1LkRU78liL_bgUB"
+  },
+  {
+    "id": 38,
+    "title": "대도시의 사랑법",
+    "poster": "posters/대도시의 사랑법.webp",
+    "rating": "8.8",
+    "genre": ["드라마", "로멘스"],
+    "releaseDate": "2024-10-06",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/pFsIUVhahr8?si=yHZE-vGA3eZmjtnL"
+  },
+  {
+    "id": 39,
+    "title": "어메이징 스파이더맨",
+    "poster": "posters/어메이징 스파이더맨.webp",
+    "rating": "8.9",
+    "genre": ["SF", "판타지"],
+    "releaseDate": "2004-11-06",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/y0VTJPTI_u8?si=F2kmpLXWhLh-boT9"
+  },
+  {
+    "id": 40,
+    "title": "외계+인",
+    "poster": "posters/외계+인.jfif",
+    "rating": "8.2",
+    "genre": ["SF", "판타지"],
+    "releaseDate": "2024-11-07",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/l9288UVTHkA?si=TmMa90T47FDYbaB1"
+  },
+  {
+    "id": 41,
+    "title": "외계+인 2",
+    "poster": "posters/외계인+인 2.webp",
+    "rating": "8.2",
+    "genre": ["SF", "판타지"],
+    "releaseDate": "2022-11-06",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/4uSn4Dem9i0?si=OF1PsY9dr5oT8pye"
+  },
+  {
+    "id": 42,
+    "title": "베테랑",
+    "poster": "posters/베테랑.webp",
+    "rating": "8.2",
+    "genre": ["액션","드라마","코미디"],
+    "releaseDate": "2023-10-06",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/hcKp68DtBb0?si=vq-lEsQo7SUV4jRj"
+  },
+  {
+    "id": 43,
+    "title": "귀멸의칼날",
+    "poster": "posters/귀멸의칼날.webp",
+    "rating": "8.2",
+    "genre": ["판타지","애니메이션"],
+    "releaseDate": "2022-10-02",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/pAPwjvIMxcg?si=YdRaKY30uJiQh6nr"
+  },
+  {
+    "id": 44,
+    "title": "노량",
+    "poster": "posters/노량.webp",
+    "rating": "8.2",
+    "genre": ["액션","드라마","스릴러"],
+    "releaseDate": "2020-08-02",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/gXEpZpnImY8?si=6LYtn6KsT3koHqmZ"
+  },
+  {
+    "id": 45,
+    "title": "한산",
+    "poster": "posters/한산.webp",
+    "rating": "8.2",
+    "genre": ["액션","드라마","스릴러"],
+    "releaseDate": "2020-10-09",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/GduEtmvwcI0?si=VGpV2K6LUoh6sxIK"
+  },
+  {
+    "id": 46,
+    "title": "20세기소녀",
+    "poster": "posters/20세기소녀.webp",
+    "rating": "8.2",
+    "genre": ["드라마", "로멘스"],
+    "releaseDate": "2020-10-04",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/2JomSAO_TGo?si=sj_vbj0fwpINZyFx"
+  },
+  {
+    "id": 47,
+    "title": "그대들은 어떻게 살것인가",
+    "poster": "posters/그대들은 어떻게 살것인가.webp",
+    "rating": "8.2",
+    "genre": ["애니메이션","판타지","어드벤처","드라마"],
+    "releaseDate": "2025-11-06",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/RURusloLi-s?si=avX-Ol3lFDsSc2_V"
+  },
+  {
+    "id": 48,
+    "title": "너의이름은",
+    "poster": "posters/너의이름은.webp",
+    "rating": "8.2",
+     "genre": ["애니메이션","판타지","어드벤처","드라마"],
+    "releaseDate": "2024-14-06",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/0GtEGZv1_Os?si=kyH1xWqtAzYIwfUx"
+  },
+  {
+    "id": 49,
+    "title": "날씨의아이",
+    "poster": "posters/날씨의아이.webp",
+    "rating": "8.2",
+     "genre": ["애니메이션","판타지","어드벤처","드라마"],
+    "releaseDate": "2020-11-06",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/ILQl1Q4jizc?si=5Ag3Gw2YC6uvOlhl"
+  },
+  {
+    "id": 50,
+    "title": "파묘",
+    "poster": "posters/파묘.jpg",
+    "rating": "8.2",
+    "genre": ["스릴러","드라마"],
+    "releaseDate": "2024-11-00",
+    "runningTime": 180,
+    "trailer": "https://www.youtube.com/embed/rjW9E1BR_30?si=OpaJBw2KrrvI91NJ"
   }
 ]

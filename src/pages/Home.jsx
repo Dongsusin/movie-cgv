@@ -11,9 +11,40 @@ const allGenres = ['전체', '액션', '코미디', '드라마', '로맨스', 'S
 
 const Home = () => {
   const navigate = useNavigate();
-  const sliderRef = useRef(null); // ✅ 컴포넌트 내부로 이동
+  const sliderRef = useRef(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('전체');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(window.innerWidth >= 1024 ? 20 : 10);
+  const filteredMovies = movies.filter(movie => {
+    const matchesGenre = selectedGenre === '전체' || movie.genre.includes(selectedGenre);
+    const matchesSearch =
+      movie.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      movie.genre.some(g => g.toLowerCase().includes(searchTerm.toLowerCase()));
+    return matchesGenre && matchesSearch;
+  });
+  const getRandomSamples = (arr, n) => {
+    const shuffled = [...arr].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, n);
+  };
+
+const randomMovies = getRandomSamples(filteredMovies, 5);
+  const totalPages = Math.ceil(filteredMovies.length / itemsPerPage);
+  const startIdx = (currentPage - 1) * itemsPerPage;
+  const paginatedMovies = filteredMovies.slice(startIdx, startIdx + itemsPerPage);
+
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      setItemsPerPage(window.innerWidth >= 1024 ? 20 : 10);
+    };
+
+    window.addEventListener('resize', updateItemsPerPage);
+    updateItemsPerPage();
+
+    return () => window.removeEventListener('resize', updateItemsPerPage);
+  }, []);
+
+  
 
   useEffect(() => {
     const loadYouTubeAPI = () => {
@@ -21,31 +52,28 @@ const Home = () => {
         const tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";
         document.body.appendChild(tag);
-      } else {
-        onYouTubeIframeAPIReady();
       }
-
-      window.onYouTubeIframeAPIReady = () => {
-        const iframes = document.querySelectorAll('iframe');
-        iframes.forEach(iframe => {
-          if (iframe.src.includes('youtube.com/embed')) {
-            new window.YT.Player(iframe, {
-              events: {
-                onStateChange: (event) => {
-                  if (event.data === window.YT.PlayerState.PLAYING) {
-                    sliderRef.current?.slickPause();
-                  } else if (
-                    event.data === window.YT.PlayerState.PAUSED ||
-                    event.data === window.YT.PlayerState.ENDED
-                  ) {
-                    sliderRef.current?.slickPlay();
-                  }
+    };
+    window.onYouTubeIframeAPIReady = () => {
+      const iframes = document.querySelectorAll('iframe');
+      iframes.forEach(iframe => {
+        if (iframe.src.includes('youtube.com/embed')) {
+          new window.YT.Player(iframe, {
+            events: {
+              onStateChange: (event) => {
+                if (event.data === window.YT.PlayerState.PLAYING) {
+                  sliderRef.current?.slickPause();
+                } else if (
+                  event.data === window.YT.PlayerState.PAUSED ||
+                  event.data === window.YT.PlayerState.ENDED
+                ) {
+                  sliderRef.current?.slickPlay();
                 }
               }
-            });
-          }
-        });
-      };
+            }
+          });
+        }
+      });
     };
 
     loadYouTubeAPI();
@@ -59,13 +87,6 @@ const Home = () => {
     navigate("/booking", { state: { movie } });
   };
 
-  const filteredMovies = movies.filter(movie => {
-    const matchesGenre = selectedGenre === '전체' || movie.genre.includes(selectedGenre);
-    const matchesSearch = movie.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      movie.genre.some(g => g.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesGenre && matchesSearch;
-  });
-
   return (
     <div className="home">
       <h1>영화 프로젝트</h1>
@@ -73,28 +94,28 @@ const Home = () => {
         예매 티켓 보기
       </button>
       <div className="trailers">
-        <Slider
-          ref={sliderRef}
-          dots={true}
-          infinite={true}
-          speed={500}
-          slidesToShow={1}
-          slidesToScroll={1}
-          arrows={true}
-        >
-          {filteredMovies.map(movie => (
-            <div key={movie.id} className="trailer-slide">
-              <div className="video-wrapper">
-                <iframe
-                  src={movie.trailer}
-                  title={`${movie.title} 예고편`}
-                  frameBorder="0"
-                  allowFullScreen
-                ></iframe>
-              </div>
+      <Slider
+        ref={sliderRef}
+        dots={true}
+        infinite={true}
+        speed={500}
+        slidesToShow={1}
+        slidesToScroll={1}
+        arrows={true}
+      >
+        {randomMovies.map(movie => (
+          <div key={movie.id} className="trailer-slide">
+            <div className="video-wrapper">
+              <iframe
+                src={movie.trailer}
+                title={`${movie.title} 예고편`}
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
             </div>
-          ))}
-        </Slider>
+          </div>
+        ))}
+      </Slider>
       </div>
 
       <h1>영화 목록</h1>
@@ -120,13 +141,25 @@ const Home = () => {
       </div>
 
       <div className="movie-list">
-        {filteredMovies.map(movie => (
+        {paginatedMovies.map(movie => (
           <div key={movie.id} className="movie-card-with-button">
             <MovieCard movie={movie} />
             <button className="book-now-btn" onClick={() => handleBookNow(movie)}>
               예매하기
             </button>
           </div>
+        ))}
+      </div>
+
+      <div className="pagination">
+        {Array.from({ length: totalPages }, (_, i) => (
+          <button
+            key={i + 1}
+            onClick={() => setCurrentPage(i + 1)}
+            className={currentPage === i + 1 ? 'page-btn active' : 'page-btn'}
+          >
+            {i + 1}
+          </button>
         ))}
       </div>
     </div>
