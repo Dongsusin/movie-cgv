@@ -1,26 +1,49 @@
 import { useRef, useEffect, useState } from "react";
-import movies from '../data/movies.json';
-import MovieCard from '../components/MovieCard';
-import { useNavigate } from 'react-router-dom';
+import movies from "../data/movies.json";
+import MovieCard from "../components/MovieCard";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './Home.css';
+import "./Home.css";
 
-const allGenres = ['전체', '액션', '코미디', '드라마', '로맨스', 'SF', '스릴러','범죄','애니메이션','모험','판타지','전기','역사','가족'];
+const allGenres = [
+  "전체",
+  "액션",
+  "코미디",
+  "드라마",
+  "로맨스",
+  "SF",
+  "스릴러",
+  "범죄",
+  "애니메이션",
+  "모험",
+  "판타지",
+  "전기",
+  "역사",
+  "가족",
+];
 
 const Home = () => {
   const navigate = useNavigate();
   const sliderRef = useRef(null);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedGenre, setSelectedGenre] = useState('전체');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedGenre, setSelectedGenre] = useState("전체");
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(window.innerWidth >= 1024 ? 20 : 10);
-  const filteredMovies = movies.filter(movie => {
-    const matchesGenre = selectedGenre === '전체' || movie.genre.includes(selectedGenre);
+  const [itemsPerPage, setItemsPerPage] = useState(
+    window.innerWidth >= 1024 ? 20 : 10
+  );
+  const genreFilterRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+  const filteredMovies = movies.filter((movie) => {
+    const matchesGenre =
+      selectedGenre === "전체" || movie.genre.includes(selectedGenre);
     const matchesSearch =
       movie.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      movie.genre.some(g => g.toLowerCase().includes(searchTerm.toLowerCase()));
+      movie.genre.some((g) =>
+        g.toLowerCase().includes(searchTerm.toLowerCase())
+      );
     return matchesGenre && matchesSearch;
   });
   const getRandomSamples = (arr, n) => {
@@ -28,36 +51,60 @@ const Home = () => {
     return shuffled.slice(0, n);
   };
 
-const randomMovies = getRandomSamples(filteredMovies, 5);
+  const randomMovies = getRandomSamples(filteredMovies, 5);
   const totalPages = Math.ceil(filteredMovies.length / itemsPerPage);
   const startIdx = (currentPage - 1) * itemsPerPage;
-  const paginatedMovies = filteredMovies.slice(startIdx, startIdx + itemsPerPage);
+  const paginatedMovies = filteredMovies.slice(
+    startIdx,
+    startIdx + itemsPerPage
+  );
+
+  // 스크롤 감지 함수
+  useEffect(() => {
+    const handleScroll = () => {
+      const el = genreFilterRef.current;
+      if (!el) return;
+
+      setCanScrollLeft(el.scrollLeft > 0);
+      setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth);
+    };
+
+    handleScroll(); // 초기 상태 확인
+    const el = genreFilterRef.current;
+    if (el) {
+      el.addEventListener("scroll", handleScroll);
+      window.addEventListener("resize", handleScroll);
+    }
+
+    return () => {
+      if (el) el.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const updateItemsPerPage = () => {
       setItemsPerPage(window.innerWidth >= 1024 ? 20 : 10);
     };
 
-    window.addEventListener('resize', updateItemsPerPage);
+    window.addEventListener("resize", updateItemsPerPage);
     updateItemsPerPage();
 
-    return () => window.removeEventListener('resize', updateItemsPerPage);
+    return () => window.removeEventListener("resize", updateItemsPerPage);
   }, []);
-
-  
 
   useEffect(() => {
     const loadYouTubeAPI = () => {
       if (!window.YT) {
-        const tag = document.createElement('script');
+        const tag = document.createElement("script");
         tag.src = "https://www.youtube.com/iframe_api";
         document.body.appendChild(tag);
       }
     };
     window.onYouTubeIframeAPIReady = () => {
-      const iframes = document.querySelectorAll('iframe');
-      iframes.forEach(iframe => {
-        if (iframe.src.includes('youtube.com/embed')) {
+      const iframes = document.querySelectorAll("iframe");
+      iframes.forEach((iframe) => {
+        if (iframe.src.includes("youtube.com/embed")) {
           new window.YT.Player(iframe, {
             events: {
               onStateChange: (event) => {
@@ -69,8 +116,8 @@ const randomMovies = getRandomSamples(filteredMovies, 5);
                 ) {
                   sliderRef.current?.slickPlay();
                 }
-              }
-            }
+              },
+            },
           });
         }
       });
@@ -94,28 +141,28 @@ const randomMovies = getRandomSamples(filteredMovies, 5);
         예매 티켓 보기
       </button>
       <div className="trailers">
-      <Slider
-        ref={sliderRef}
-        dots={false}
-        infinite={true}
-        speed={500}
-        slidesToShow={1}
-        slidesToScroll={1}
-        arrows={true}
-      >
-        {randomMovies.map(movie => (
-          <div key={movie.id} className="trailer-slide">
-            <div className="video-wrapper">
-              <iframe
-                src={movie.trailer}
-                title={`${movie.title} 예고편`}
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
+        <Slider
+          ref={sliderRef}
+          dots={false}
+          infinite={true}
+          speed={500}
+          slidesToShow={1}
+          slidesToScroll={1}
+          arrows={true}
+        >
+          {randomMovies.map((movie) => (
+            <div key={movie.id} className="trailer-slide">
+              <div className="video-wrapper">
+                <iframe
+                  src={movie.trailer}
+                  title={`${movie.title} 예고편`}
+                  frameBorder="0"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
       </div>
 
       <h1>영화 목록</h1>
@@ -127,24 +174,36 @@ const randomMovies = getRandomSamples(filteredMovies, 5);
         onChange={(e) => setSearchTerm(e.target.value)}
         className="search-input"
       />
+      <div className="genre-filter-wrapper">
+        {canScrollLeft && <span className="scroll-arrow-inner left">&lt;</span>}
 
-      <div className="genre-filter">
-        {allGenres.map((genre) => (
-          <button
-            key={genre}
-            className={genre === selectedGenre ? 'genre-btn active' : 'genre-btn'}
-            onClick={() => setSelectedGenre(genre)}
-          >
-            {genre}
-          </button>
-        ))}
+        <div className="genre-filter" ref={genreFilterRef}>
+          {allGenres.map((genre) => (
+            <button
+              key={genre}
+              className={
+                genre === selectedGenre ? "genre-btn active" : "genre-btn"
+              }
+              onClick={() => setSelectedGenre(genre)}
+            >
+              {genre}
+            </button>
+          ))}
+        </div>
+
+        {canScrollRight && (
+          <span className="scroll-arrow-inner right">&gt;</span>
+        )}
       </div>
 
       <div className="movie-list">
-        {paginatedMovies.map(movie => (
+        {paginatedMovies.map((movie) => (
           <div key={movie.id} className="movie-card-with-button">
             <MovieCard movie={movie} />
-            <button className="book-now-btn" onClick={() => handleBookNow(movie)}>
+            <button
+              className="book-now-btn"
+              onClick={() => handleBookNow(movie)}
+            >
               예매하기
             </button>
           </div>
@@ -156,7 +215,7 @@ const randomMovies = getRandomSamples(filteredMovies, 5);
           <button
             key={i + 1}
             onClick={() => setCurrentPage(i + 1)}
-            className={currentPage === i + 1 ? 'page-btn active' : 'page-btn'}
+            className={currentPage === i + 1 ? "page-btn active" : "page-btn"}
           >
             {i + 1}
           </button>
