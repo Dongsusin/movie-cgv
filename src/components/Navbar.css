@@ -4,8 +4,9 @@
   background-color: #000000;
   padding: 15px 30px;
   color: white;
-  z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  z-index: 10000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  height: 60px;
 }
 
 .navbar-inner {
@@ -40,7 +41,7 @@
   color: #e50914;
 }
 
-.cart-button{
+.cart-button {
   width: 100px;
   font-size: 12px;
   text-wrap: nowrap;
@@ -48,14 +49,85 @@
   margin: 0;
 }
 
-@media screen and (max-width: 426px) {
-  .navbar {
-  padding: 5px;
+/* ✅ 현재 페이지 강조 */
+.navbar nav a.active,
+.mobile-menu a.active {
+  color: #e50914;
+  font-weight: bold;
+  text-decoration: underline;
 }
-  .navbar-logo {
-  font-size: 16px;
+
+/* ✅ 햄버거 아이콘 (모바일용) */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ✅ 모바일 메뉴 (사이드 드로어) */
+.mobile-menu {
+  position: fixed;
+  top: 60px; /* 기존 navbar 높이만큼 아래로 */
+  right: -100%;
+  width: 70%;
+  height: calc(100% - 60px); /* 헤더 높이만큼 뺌 */
+  background-color: #111;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 200;
+}
+
+/* ✅ 모바일 메뉴 - 열릴 때 */
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+/* ✅ 배경 오버레이 */
+.overlay {
+  position: fixed;
+  top: 60px; /* 헤더 안 가리도록 */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 150;
+}
+
+/* ✅ 데스크탑용 nav 그룹 지정 */
+.navbar-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ✅ 모바일 반응형 스타일 */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 5px;
   }
+
+  .navbar-logo {
+    font-size: 16px;
+  }
+
   .navbar nav a {
-  font-size: 12px;
+    font-size: 12px;
+  }
+
+  .navbar nav,
+  .navbar-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
   }
 }

@@ -21,7 +21,7 @@
   height: 300px;
   display: flex;
   align-items: flex-end;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   position: relative;
   transition: transform 0.3s;
 }
@@ -38,4 +38,26 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  h3 {
+    margin: 0;
+  }
+}
+
+.info-button {
+  padding: 5px 8px;
+  font-size: 12px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 426px) {
+  .shop-item {
+    width: 100px;
+    height: 150px;
+  }
+
+  .item-info {
+    padding: 2px;
+    font-size: 12px;
+    text-wrap: nowrap;
+  }
 }

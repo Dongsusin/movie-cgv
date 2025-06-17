@@ -1,13 +1,12 @@
-
-import shopItems from '../data/shopData';
-import './Shop.css';
+import shopItems from "../data/shopData";
+import "./Shop.css";
 
 const Shop = ({ addToCart }) => {
   return (
     <div className="shop-container">
       <h1>상점</h1>
       <div className="shop-grid">
-        {shopItems.map(item => (
+        {shopItems.map((item) => (
           <div
             key={item.id}
             className="shop-item"
@@ -16,7 +15,9 @@ const Shop = ({ addToCart }) => {
             <div className="item-info">
               <h3>{item.name}</h3>
               <span>{item.price.toLocaleString()}원</span>
-              <button onClick={() => addToCart(item)}>구매하기</button>
+              <button className="info-button" onClick={() => addToCart(item)}>
+                구매하기
+              </button>
             </div>
           </div>
         ))}
