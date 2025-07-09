@@ -50,7 +50,7 @@
   margin: 0;
 }
 
-/* ✅ 현재 페이지 강조 */
+/* 현재 페이지 강조 */
 .navbar nav a.active,
 .mobile-menu a.active {
   color: #e50914;
@@ -58,7 +58,7 @@
   text-decoration: underline;
 }
 
-/* ✅ 햄버거 아이콘 (모바일용) */
+/* 햄버거 아이콘 (모바일용) */
 .hamburger {
   display: none;
   font-size: 24px;
@@ -66,23 +66,23 @@
   color: white;
 }
 
-/* ✅ 모바일 메뉴 (사이드 드로어) */
+/* 모바일 메뉴 (사이드 드로어) */
 .mobile-menu {
   position: fixed;
-  top: 60px; /* 기존 navbar 높이만큼 아래로 */
+  top: 60px;
   right: -100%;
   width: 70%;
-  height: calc(100% - 60px); /* 헤더 높이만큼 뺌 */
+  height: calc(100% - 60px);
   background-color: #111;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   transition: right 0.3s ease-in-out;
-  z-index: 200;
+  z-index: 1000;
 }
 
-/* ✅ 모바일 메뉴 - 열릴 때 */
+/* 모바일 메뉴 - 열릴 때 */
 .mobile-menu.open {
   right: 0;
 }
@@ -91,10 +91,10 @@
   right: 0;
 }
 
-/* ✅ 배경 오버레이 */
+/* 배경 오버레이 */
 .overlay {
   position: fixed;
-  top: 60px; /* 헤더 안 가리도록 */
+  top: 60px;
   left: 0;
   width: 100%;
   height: calc(100% - 60px);
@@ -102,14 +102,14 @@
   z-index: 150;
 }
 
-/* ✅ 데스크탑용 nav 그룹 지정 */
+/* 데스크탑용 nav 그룹 지정 */
 .navbar-links {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
-/* ✅ 모바일 반응형 스타일 */
+/* 모바일 반응형 스타일 */
 @media screen and (max-width: 768px) {
   .navbar {
     padding: 5px;

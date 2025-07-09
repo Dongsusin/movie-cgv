@@ -154,7 +154,7 @@
 
 .slick-prev,
 .slick-next {
-  z-index: 10000;
+  z-index: 1000;
   width: 60px;
   height: 60px;
   top: 50%;
